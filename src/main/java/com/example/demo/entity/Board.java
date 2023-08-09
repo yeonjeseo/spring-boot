@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import lombok.*;
 
+import org.checkerframework.checker.units.qual.C;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
@@ -24,8 +25,11 @@ public class Board {
     @Column(length = 255)
     private String title;
 
+    @Column(length = 255)
+    private String content;
+
     @Builder
-    public Board(Integer id, String title) {
-        this.title = title;
+    public Board(String title, String content) {
+        this.title = title; this.content = content;
     }
 }

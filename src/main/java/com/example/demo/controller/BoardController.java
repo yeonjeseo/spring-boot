@@ -32,6 +32,7 @@ public class BoardController {
             @Valid
             @RequestBody CreateBoardRequestDto createBoardRequestDto
     ) {
+        boardService.createBoard(createBoardRequestDto);
         return "ok";
     }
 }

@@ -1,6 +1,7 @@
 package com.example.demo.service.implementation;
 
 import com.example.demo.dto.BoardResponseDto;
+import com.example.demo.dto.CreateBoardRequestDto;
 import com.example.demo.entity.Board;
 import com.example.demo.repository.BoardRepository;
 import com.example.demo.service.BoardService;
@@ -30,5 +31,10 @@ public class BoardServiceImplementation implements BoardService {
         }
 
         return boardList;
+    }
+
+    @Override
+    public void createBoard(CreateBoardRequestDto createBoardRequestDto) {
+        boardRepository.save(new Board(createBoardRequestDto.getTitle(), createBoardRequestDto.getContent()));
     }
 }
