@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final UserService userService;
 
+    @PostMapping("")
+    public String registerUser(
+            @Valid @RequestBody CreateUserRequestDto createUserRequestDto
+    ){
+        userService.registerUser(createUserRequestDto);
+        return "User Registered!";
+    }
+
     @GetMapping("/{userId}")
     public UserDto findOneUserById(
             @PathVariable Integer userId
     ) {
         return userService.findUserById(userId);
-    }
-
-    @PostMapping("")
-    public String registerUser(
-            @Valid @RequestBody CreateUserRequestDto createUserRequestDto
-            ){
-        userService.registerUser(createUserRequestDto);
-        return "User Registered!";
     }
 }
