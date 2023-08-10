@@ -1,0 +1,35 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# IntelliJ IDEA project files
+.idea/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Maven build directory
+target/
+
+# Gradle build directory
+build/
+
+# Spring Boot devtools properties
+.spring-boot-devtools.properties
+
+# Spring Boot log file
+spring.log
+
+# IDE files
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# System files
+.DS_Store
+Thumbs.db
