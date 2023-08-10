@@ -1,11 +1,10 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.BoardResponseDto;
+import com.example.demo.dto.BoardDto;
 import com.example.demo.dto.CreateBoardRequestDto;
 import com.example.demo.service.BoardService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,7 +22,7 @@ public class BoardController {
 //    }
 
     @GetMapping("")
-    public List<BoardResponseDto> getAllBoardsController() {
+    public List<BoardDto> getAllBoardsController() {
         return boardService.getAllBoards();
     }
 

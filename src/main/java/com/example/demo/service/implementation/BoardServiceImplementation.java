@@ -1,6 +1,6 @@
 package com.example.demo.service.implementation;
 
-import com.example.demo.dto.BoardResponseDto;
+import com.example.demo.dto.BoardDto;
 import com.example.demo.dto.CreateBoardRequestDto;
 import com.example.demo.entity.Board;
 import com.example.demo.repository.BoardRepository;
@@ -19,13 +19,13 @@ public class BoardServiceImplementation implements BoardService {
     private final BoardRepository boardRepository;
 
     @Override
-    public List<BoardResponseDto> getAllBoards() {
+    public List<BoardDto> getAllBoards() {
 
         List<Board> all = boardRepository.findAll();
-        List<BoardResponseDto> boardList = new ArrayList<>();
+        List<BoardDto> boardList = new ArrayList<>();
 
         for(Board board: all) {
-            BoardResponseDto boardDto = BoardResponseDto.builder().title(board.getTitle()).build();
+            BoardDto boardDto = BoardDto.builder().title(board.getTitle()).content(board.getContent()).id(board.getId()).build();
 
             boardList.add(boardDto);
         }
