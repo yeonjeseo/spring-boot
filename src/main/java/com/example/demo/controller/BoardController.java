@@ -34,4 +34,11 @@ public class BoardController {
         boardService.createBoard(createBoardRequestDto);
         return "ok";
     }
+
+    @DeleteMapping("/{boardId}")
+    public String deleteBoard(
+            @PathVariable Integer boardId
+    ) {
+        return boardService.deleteBoardById(boardId);
+    }
 }

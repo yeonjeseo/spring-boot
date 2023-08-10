@@ -9,4 +9,6 @@ public interface BoardService {
     List<BoardDto> getAllBoards();
 
     void createBoard(CreateBoardRequestDto createBoardRequestDto);
+
+    String deleteBoardById(Integer id);
 }

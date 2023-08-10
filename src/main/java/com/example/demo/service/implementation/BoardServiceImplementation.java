@@ -37,4 +37,10 @@ public class BoardServiceImplementation implements BoardService {
     public void createBoard(CreateBoardRequestDto createBoardRequestDto) {
         boardRepository.save(new Board(createBoardRequestDto.getTitle(), createBoardRequestDto.getContent()));
     }
+
+    @Override
+    public String deleteBoardById(Integer id) {
+        boardRepository.deleteById(id);
+        return "Successfully deleted a board!";
+    }
 }
