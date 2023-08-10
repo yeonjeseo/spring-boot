@@ -2,12 +2,15 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.BoardDto;
 import com.example.demo.dto.CreateBoardRequestDto;
+import com.example.demo.dto.UpdateBoardRequestDto;
+import com.example.demo.entity.Board;
 import com.example.demo.service.BoardService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -40,5 +43,13 @@ public class BoardController {
             @PathVariable Integer boardId
     ) {
         return boardService.deleteBoardById(boardId);
+    }
+
+    @PutMapping("/{boardId}")
+    public Board updateBoard(
+            @PathVariable Integer boardId,
+            @Valid @RequestBody UpdateBoardRequestDto updateBoardRequestDto
+            ) {
+        return boardService.updateBoardById(boardId, updateBoardRequestDto);
     }
 }
