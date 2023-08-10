@@ -7,7 +7,6 @@ import lombok.*;
 @Setter
 @Getter
 @AllArgsConstructor
-@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "user")
 public class User {
@@ -24,4 +23,11 @@ public class User {
 
     @Column(length = 255, nullable = false)
     private String password;
+
+    @Builder
+    public User(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 }

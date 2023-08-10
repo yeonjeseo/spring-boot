@@ -1,8 +1,8 @@
 package com.example.demo.service.implementation;
 
-import com.example.demo.dto.BoardDto;
-import com.example.demo.dto.CreateBoardRequestDto;
-import com.example.demo.dto.UpdateBoardRequestDto;
+import com.example.demo.dto.board.BoardDto;
+import com.example.demo.dto.board.CreateBoardRequestDto;
+import com.example.demo.dto.board.UpdateBoardRequestDto;
 import com.example.demo.entity.Board;
 import com.example.demo.repository.BoardRepository;
 import com.example.demo.service.BoardService;
@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Component

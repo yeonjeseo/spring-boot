@@ -38,7 +38,7 @@ dependencies {
 	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 
 	// Authentication
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	// Dev utility
 	compileOnly("org.springframework.boot:spring-boot-devtools")
