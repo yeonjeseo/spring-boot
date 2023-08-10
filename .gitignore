@@ -1,35 +1,77 @@
-# Compiled class file
-*.class
-
-# Log files
-*.log
-
-# IntelliJ IDEA project files
+# 편집기/IDE 설정 파일
 .idea/
+.vscode/
 
-# Eclipse project files
+# 빌드 결과물 및 컴파일된 클래스 파일
+/target/
+/build/
+
+# Maven 설정 파일 및 저장소
+pom.xml
+*.jar
+*.war
+*.ear
+mvnw
+mvnw.cmd
+!src/main/
+!src/test/
+
+# Gradle 설정 파일 및 저장소
+build.gradle
+settings.gradle
+.gradle/
+!src/main/
+!src/test/
+
+# Spring Boot 실행 로그
+spring.log
+
+# 스프링 부트 DevTools 재시작 설정
+.restart
+
+# 애플리케이션 설정 파일
+src/main/resources/application.properties
+src/main/resources/application.yml
+
+# 로컬 프로파일 설정
+src/main/resources/application-*.properties
+src/main/resources/application-*.yml
+
+# 환경 변수 설정 파일
+src/main/resources/application-env.properties
+src/main/resources/application-env.yml
+
+# 개발 환경별 설정
+src/main/resources/application-dev.properties
+src/main/resources/application-prod.properties
+src/main/resources/application-staging.properties
+
+# IDE 메타데이터 폴더
 .classpath
 .project
 .settings/
 
-# Maven build directory
+# 로그 파일
+logs/
+*.log
+
+# 테스트 결과 및 리포트
+test-output/
 target/
 
-# Gradle build directory
-build/
-
-# Spring Boot devtools properties
-.spring-boot-devtools.properties
-
-# Spring Boot log file
-spring.log
-
-# IDE files
-.vscode/
+# 패키지 관련 파일
 *.iml
 *.ipr
 *.iws
 
-# System files
-.DS_Store
-Thumbs.db
+# 자동 생성된 파일들
+spring-configuration-metadata.json
+
+# Gradle Wrapper Jar 파일
+gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA 프로젝트 파일
+*.iml
+*.ipr
+*.iws
+*.idea/
